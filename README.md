@@ -1,3 +1,8 @@
+## 技术栈：
+
+angular2.0 + ionic2.0 + rxjs  + sass + ES6/7 + webpack + typescript + tslint
+
+
 >angular2.0-ionic-moon
 
 >ionic2 moon app
