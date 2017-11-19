@@ -1,0 +1,46 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{title}}</ion-title>
+        <ion-buttons end *ngIf="!isShow">
+            <button ion-button icon-only [navPush]="TabPage">
+                    <ion-icon name="home"></ion-icon>
+             </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>乘客姓名</ion-label>
+            <ion-input class="form-input" type="text" placeholder="与身份证一致" [(ngModel)]="name" minlength="2" maxlength="6" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>乘客电话</ion-label>
+            <ion-input type="tel" placeholder="请输入联系电话" FormControl="phone" [(ngModel)]="phone" minlength="8" maxlength="11" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>证件类型</ion-label>
+            <ion-input class="form-input col-card" type="text" placeholder="身份证" disabled></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>证件号码</ion-label>
+            <ion-input class="form-input" type="text" placeholder="请输入身份证号码" [(ngModel)]="idCardNo" minlength="15" maxlength="18" clearInput></ion-input>
+        </ion-item>
+        <!--<ion-item text-wrap class="text-tips">
+            *务必提供正确、有效的身份证信息，确保您可有效地享受<a class="passenger-risk">《乘车意外险》</a>权益
+        </ion-item>-->
+        <!--<a ion-item detail-none>《乘车意外险》</a>-->
+    </ion-list>
+    <ion-row padding class="row-save " *ngIf="!isShow">
+        <!--[disabled]="!passengerForm.valid " #idCardNo="ngModel "-->
+        <button ion-button block color="danger" (click)="sendEvent()">保存{{myProperty}}</button>
+    </ion-row>
+    <ion-row padding class="row-save " *ngIf="isShow">
+        <button ion-button block color="danger">编辑</button>
+    </ion-row>
+
+</ion-content>

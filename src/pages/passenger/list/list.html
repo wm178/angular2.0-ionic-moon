@@ -1,0 +1,85 @@
+<ion-header>
+    <!--<ion-icon name="options"></ion-icon>-->
+    <ion-navbar hideBackButton *ngIf="pageType">
+        <ion-title>乘客列表</ion-title>
+
+        <ion-buttons *ngIf="pageType" end>
+            <button ion-button icon-only (click)="confirmPassenger()">
+                     确定
+             </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-navbar *ngIf="!pageType">
+        <ion-title>乘客列表</ion-title>
+        <ion-buttons *ngIf="!isCanGoBack" start>
+            <button ion-button icon-only [navPush]="homePage">
+                    <ion-icon name="home"></ion-icon>
+             </button>
+        </ion-buttons>
+        <ion-buttons *ngIf="pageType" end>
+            <button ion-button icon-only (click)="confirmPassenger()">
+                     确定
+             </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-list class="list-head">
+        <!--[navPush]="formPage" -->
+        <ion-list-header class="list-title" (click)="toFormPage()">
+            <i class="icon-add"></i>添加常用乘客
+        </ion-list-header>
+        <h2 *ngIf="httpOver" class="null-passenger">常用乘客列表为空</h2>
+        <ion-item class="item-info" *ngFor="let passenger of passengerList; let i = index; trackBy: trackByFn">
+            <ion-label>
+                <ion-row>
+                    <ion-col width-25 class="col-name">{{passenger.name}}</ion-col>
+                    <ion-col width-75 class="col-tel">{{passenger.phone}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-25 class="col-card">身份证</ion-col>
+                    <ion-col width-75 class="col-num">{{passenger.idCardNo}}</ion-col>
+                </ion-row>
+                <ion-row class="row-add" (click)="presentActionSheet(passenger)"><i class="icon-more"></i></ion-row>
+            </ion-label>
+            <ion-checkbox *ngIf="pageType" (click)="checkedPassenger(passenger)" [(ngModel)]="passenger.isChecked" checked="passenger.isChecked"></ion-checkbox>
+            <!--(ionChange)="checkedPassenger(passenger,index)"-->
+        </ion-item>
+
+        <!--<ion-item class="item-info">
+            <ion-label>
+                <ion-row>
+                    <ion-col width-25 class="col-name">田野</ion-col>
+                    <ion-col width-75 class="col-tel">13520213557</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-25 class="col-card">省份证</ion-col>
+                    <ion-col width-75 class="col-num">440301199911111111</ion-col>
+                </ion-row>
+                <ion-row class="row-add"><i class="icon-more"></i></ion-row>
+            </ion-label>
+            <ion-checkbox></ion-checkbox>
+        </ion-item>
+
+        <ion-item class="item-info">
+            <ion-label>
+                <ion-row>
+                    <ion-col width-25 class="col-name">田野</ion-col>
+                    <ion-col width-75 class="col-tel">13520213557</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-25 class="col-card">省份证</ion-col>
+                    <ion-col width-75 class="col-num">440301199911111111</ion-col>
+                </ion-row>
+                <ion-row class="row-add"><i class="icon-more"></i></ion-row>
+            </ion-label>
+            <ion-checkbox></ion-checkbox>
+        </ion-item>(click)="checkedPassenger(passenger.id)"-->
+
+    </ion-list>
+    <!--<ion-row padding class="row-submit" *ngIf="pageType==2">
+        <button ion-button block (click)="confirmPassenger()">确定</button>
+    </ion-row>-->
+</ion-content>

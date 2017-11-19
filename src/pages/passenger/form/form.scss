@@ -1,0 +1,58 @@
+@import "../../../theme/variables";
+page-form {
+    .bars-button {
+        color: #fff;
+    }
+    .scroll-content {
+        background-color: #f7f9fd;
+    }
+    .bar-buttons-md {
+        height: 40px;
+        line-height: 30px;
+    }
+    .text-input[disabled] {
+        opacity: 1;
+        color: #000;
+    }
+    .row-save {
+        button {
+            height: 44px;
+            background: color($colors, red-thunderbird, base);
+            color: #fff;
+            font-size: 17px;
+            &:hover {
+                background-color: color($colors, red-thunderbird, base) !important;
+            }
+            &:focus {
+                background-color: color($colors, red-thunderbird, base) !important;
+                text-decoration: none;
+                outline: none;
+            }
+        }
+    }
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+        border-bottom-color: #ddd;
+        box-shadow: inset 0 -1px 0 0 #ddd;
+    }
+    .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+        border-bottom-color: #ddd;
+        box-shadow: inset 0 -1px 0 0 #ddd;
+    }
+    .text-tips {
+        font-size: 8px;
+        color: #9EA8C3;
+        .passenger-risk {
+            color: #0089dc;
+        }
+    }
+    .list-ios,
+    .list-md {
+        margin: 7px 0 32px 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .input-ios[clearInput] .text-input {
+        padding-right: 0;
+    }
+}

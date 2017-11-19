@@ -38,10 +38,13 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  red-thunderbird:    #327eff
 );
-
-
+// $colors: (
+//   red-thunderbird:    #327eff
+// );
+// @error $error-msg;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

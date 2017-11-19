@@ -1,0 +1,60 @@
+<!--
+  Generated template for the Coupon page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <!--*ngIf="!isUseShow"-->
+        <span tappable *ngIf="!isUseShow" class="coupon-btn-left" (click)="goBack()">返回</span>
+        <ion-title>优惠券</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div *ngIf="isShowList">
+        <div class="null-coupon-background"></div>
+        <h2 class="null-coupon">暂无可用优惠券</h2>
+        <!--您暂无可用优惠券，-->
+        <div class="null-coupon-tip">敬请期待更多的优惠活动</div>
+    </div>
+    <!-- *ngFor="let coupon of fixedCoupon; let i = index; trackBy: trackByFn" -->
+    <ion-list class="list-coupon">
+        <div class="row-coupon">
+            <div class="col-left">
+                <p class="price"><span>￥</span>{{1}}</p>
+                <p class="tip">满{{888}}元可用</p>
+            </div>
+            <div class="col-right">
+                <div class="wrap">
+                    <i class="icon-select"></i>
+                    <div class="title">限平日高峰期使用</div>
+                    <div class="date">失效时间：{{"2016-03-15"}}</div>
+                    <div class="note">适用于<span class="blue">美的</span>服务</div>
+                    <button ion-button class="btn-use" clear [navPush]="homePage">立即使用</button>
+                </div>
+            </div>
+        </div>
+  <!-- *ngFor="let coupon of discountCoupon; let i = index; trackBy: trackByFn" -->
+        <div class="row-coupon">
+            <div class="col-left">
+                <p class="price">{{ 8}}<span>折</span></p>
+                <p class="tip">最多抵扣{{1}}元</p>
+            </div>
+            <div class="col-right">
+                <div class="wrap">
+                    <i class="icon-select"></i>
+                    <div class="title">限平日高峰期使用</div>
+                    <div class="date">失效时间：{{"2016-03-15"}}</div>
+                    <div class="note">适用于<span class="blue">美的</span>服务</div>
+                    <button ion-button class="btn-use" clear [navPush]="homePage">立即使用</button>
+                </div>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

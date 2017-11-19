@@ -1,0 +1,17 @@
+/**
+ * Created by ex_chenxw on 2017/7/5.
+ */
+
+ /*****************************************************
+ ******************示例交互数据json****************************
+*****************************************************/
+
+{
+  "messageId": 511,
+  "version": 0,
+  "platform": 0,
+  "op": null,
+  "token": null,
+  "code": 200,
+  "data": "{\"currentPage\":1,\"pageSize\":20,\"body\":[{\"id\":\"87_4\",\"lineName\":\"赣深线\",\"trainNumber\":\"007\",\"startTime\":\"1970-01-01 06:14:00\",\"startCityCode\":\"0791\",\"endCityCode\":\"0755\",\"status\":1,\"detail\":null,\"companyId\":4,\"ticketPrice\":18000,\"startStation\":\"江西站\",\"endStation\":\"深圳站\",\"busStationList\":[{\"index\":1,\"name\":\"江西站\",\"cityCode\":\"0791\",\"adCode\":\"360111\",\"cityName\":\"南昌市\",\"district\":\"青山湖区\",\"detail\":null,\"address\":\"南昌市青山湖区江西站\",\"arriveTime\":\"2017-02-22 06:14:00\",\"lon\":115.921226,\"lat\":28.664297},{\"index\":2,\"name\":\"深圳站\",\"cityCode\":\"0755\",\"adCode\":\"440306\",\"cityName\":\"深圳市\",\"district\":\"宝安区\",\"detail\":\"\",\"address\":\"深圳市宝安区深圳站\",\"arriveTime\":\"2017-02-22 18:14:00\",\"lon\":114.031128,\"lat\":22.669701}]}]}"
+}

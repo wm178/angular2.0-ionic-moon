@@ -1,0 +1,225 @@
+ @import "../../../theme/variables";
+ page-list {
+     display: flex;
+     display: -webkit-flex;
+     .bar-buttons-md {
+         height: 40px;
+         line-height: 30px;
+     }
+     .scroll-content {
+         background-color: #f7f9fd;
+         margin-top: 61px;
+     }
+     .list-title {
+         padding-left: 0;
+         background-color: #fff;
+         text-align: center;
+         border-bottom: 0;
+         margin-bottom: 10px;
+         color: color($colors, red-thunderbird, base);
+         .label {
+             font-size: 17px;
+             margin-right: 0;
+             vertical-align: middle;
+         }
+         .icon-add {
+             position: relative;
+             top: 3px;
+             right: 6px;
+             display: inline-block;
+             vertical-align: baseline;
+             width: 16px;
+             height: 16px;
+             background: url(../assets/images/NewAndroid/drawable-xhdpi/add_ico_add_ck.png);
+             background-size: 100%;
+             background-position: center;
+         }
+     }
+     .list-head {
+         .item-block:last-child {
+             border-bottom: none;
+         }
+     }
+     .bars-button {
+         color: #424242;
+     }
+     .bar-button-ios {
+         color: #424242;
+     }
+     .item-info {
+         &::after {
+             content: " ";
+             position: absolute;
+             bottom: 0;
+             width: 100%;
+             border-bottom: 1px solid #e7e9f0;
+             color: #D9D9D9;
+             left: 12px;
+         }
+         &:last-child {
+             &::after {
+                 border-bottom: none;
+             }
+         }
+         ion-col {
+             padding-top: 0;
+             padding-bottom: 0;
+         }
+         ion-checkbox {
+             margin-right: 24px !important;
+         }
+         .checkbox-icon {
+             border: none;
+             background: url(../assets/images/Android/drawable-xhdpi/add_ico_nselected.png);
+             background-size: 100%;
+             background-position: center;
+             border-radius: 0;
+         }
+         .checkbox-checked {
+             border: none;
+             background: url(../assets/images/Android/drawable-xhdpi/add_ico_selected.png);
+             background-size: 100%;
+             background-position: center;
+             .checkbox-inner {
+                 display: none;
+             }
+         }
+         .item-inner {
+             border-bottom: none !important;
+             padding-right: 0;
+             .label {
+                 margin-bottom: 8px;
+             }
+         }
+         .col-name {
+             min-width: 120px;
+             color: #3A4869;
+             font-size: 1.8rem;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+         }
+         .col-tel {
+             color: #9EA8C3;
+             font-size: 1.4rem;
+         }
+         .col-card {
+             min-width: 120px;
+             color: #9EA8C3;
+             font-size: 1.6rem;
+         }
+         .col-num {
+             color: #9EA8C3;
+             font-size: 1.4rem;
+         }
+         .row-add {
+             position: absolute;
+             top: 0px;
+             right: 2px;
+             display: block;
+             width: 12%;
+             height: 100%;
+             .icon-more {
+                 position: absolute;
+                 top: 15px;
+                 right: 0;
+                 display: block;
+                 width: 30px;
+                 height: 30px;
+                 background: url(../assets/images/Android/drawable-xhdpi/add_ico_more.png);
+                 background-size: 100%;
+                 background-position: center;
+             }
+         }
+     }
+     .row-submit {
+         position: fixed;
+         bottom: 0;
+         button {
+             height: 44px;
+             background: color($colors, red-thunderbird, base);
+             color: #fff;
+             font-size: 17px;
+             &:hover,
+             &:focus {
+                 background-color: color($colors, red-thunderbird, base);
+                 text-decoration: none;
+                 outline: none;
+             }
+         }
+     }
+     .null-passenger {
+         margin: auto;
+         text-align: center;
+         font-weight: 200;
+         margin-top: 40%;
+     }
+ }
+ 
+ //  @media (max-width: 350px) {
+ //      .item-md {
+ //          padding-right: 10px;
+ //      }
+ //  }
+ @media (max-width: 360px) {
+     .item.item-md {
+         .checkbox-md {
+             margin: 9px 36px 9px -2px;
+         }
+     }
+     .item-md {
+         padding-right: 10px;
+     }
+     .col-name {
+         min-width: 72px !important;
+     }
+     .col-card {
+         min-width: 72px !important;
+     }
+ }
+ 
+ .alert-md {
+     .alert-wrapper {
+         border-radius: 12px;
+     }
+     .alert-title {
+         font-size: 16px;
+         color: #3A4869;
+     }
+     .alert-button {
+         color: color($colors, red-thunderbird, base);
+     }
+ }
+ 
+ .action-sheet-group {
+     text-align: center !important;
+     .action-sheet-md {
+         border-bottom: 1px solid #ddd;
+     }
+     .action-sheet-delete {
+         color: #e13838 !important;
+     }
+ }
+ 
+ // .action-sheet-wrapper {
+ //     .action-sheet-md {
+ //     }
+ // }
+ .action-sheet-container {
+     margin: 5px 10px;
+     border-radius: 12px;
+     box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+ }
+ 
+ // .action-sheet-md {
+ //     .action-sheet-button {
+ //         padding: 0 16rem;
+ //     }
+ // }
+ // @media (max-width: 485px) {
+ //     .action-sheet-md {
+ //         .action-sheet-button {
+ //             padding: 0 16px;
+ //         }
+ //     }
+ // }

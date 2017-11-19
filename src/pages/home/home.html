@@ -5,13 +5,18 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Welcome to Midea Ionic!</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.
   </p>
   <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
+    Take a look at the <code>src/pages/</code> directory to add or change tabs, update any existing page or create new pages.
   </p>
+  <!-- <page-form [myProperty] = "testdata" (myEvent)="getEvent($event)"></page-form> -->
+  <ion-row padding class="row-save ">
+    <button ion-button block color="danger" (click)="toFormPage()">普通表单页</button>
+  </ion-row>
+   <ion-row padding class="row-save ">
+    <button ion-button block color="danger" (click)="toCouponPage()">实例页</button>
+  </ion-row>
 </ion-content>

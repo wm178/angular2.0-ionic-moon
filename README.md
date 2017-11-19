@@ -1,6 +1,6 @@
->angular2.0-blank-template
+>angular2.0-ionic-moon
 
->ionic2
+>ionic2 moon app
 
 >node的版本要求大于6
 
@@ -17,6 +17,12 @@ ionic serve
 #打包项目
 npm run build //测试
 npm run ionic:build --prod//生产
+
+
+#Deploying to a Device
+ionic cordova run android --prod --release
+# or
+ionic cordova build android --prod --release
 
 # 文件结构
  

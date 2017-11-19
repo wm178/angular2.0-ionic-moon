@@ -1,0 +1,142 @@
+@import "../../theme/variables";
+page-coupon {
+    .scroll-content {
+        background-color: #f9f7fd;
+    }
+    .header-md {
+        &:after {
+            bottom: 0;
+            height: 0 !important;
+            background-color: #f8f8f8;
+            background-image: none;
+        }
+    }
+    // .null-coupon {
+    //     margin: auto;
+    //     text-align: center;
+    //     font-weight: 200;
+    //     margin-top: 40%;
+    // }
+    .null-coupon {
+        margin: auto;
+        text-align: center;
+        font-weight: 200;
+        font-size: 24px;
+        font-family: "Microsoft YaHei", "PingFang SC";
+        color: #666c7b;
+    }
+    .null-coupon-tip {
+        text-align: center;
+        font-size: 16px;
+        padding-top: 10px;
+        color: #9eabc3;
+    }
+    .null-coupon-background {
+        margin: 0 auto;
+        width: 30vw;
+        height: 30vw;
+        background: url(../assets/imgs/wallet_ico_coupon.png);
+        background-size: 100%;
+        background-position: center;
+        margin-top: 10%;
+    }
+    .coupon-btn-left {
+        float: left;
+        padding-left: 5px;
+    }
+    .list-coupon {
+        width: 100%;
+        min-width: 320px;
+        height: 108px;
+        padding: 10px 0;
+        .row-coupon {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            background-color: #fff;
+            height: auto;
+        }
+        .col-left {
+            position: relative;
+            float: left;
+            width: 108px;
+            height: 108px;
+            background: url(../assets/imgs/pay_ico_coupon.png);
+            background-size: 100%;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            .price {
+                position: relative;
+                font-size: 32px;
+                padding-top: 25px;
+                line-height: 32px;
+                span {
+                    font-size: 12px;
+                }
+            }
+            .tip {
+                position: absolute;
+                bottom: 17px;
+                font-size: 14px;
+                padding: 0 8px;
+            }
+            p {
+                margin: 0;
+            }
+        }
+        .col-right {
+            overflow: hidden;
+            height: 108px;
+            border: 1px solid #e7e9f0;
+            box-sizing: border-box;
+            border-left: none;
+            .wrap {
+                position: relative;
+                padding: 8px 4px 0;
+                font-size: 13px;
+                .icon-select {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 21px;
+                    height: 21px;
+                    background: url(../../assets/imgs/pay_ico_select.png);
+                    background-size: 100%;
+                    background-position: center;
+                }
+                .title {
+                    margin-bottom: 9px;
+                }
+                .date {
+                    margin-bottom: 9px;
+                    color: #9298ae;
+                    font-size: 12px;
+                }
+                .note {
+                    height: 30px;
+                    line-height: 50px;
+                    border-top: 1px dashed #ddd;
+                    .blue {
+                        color: #387ef5;
+                    }
+                }
+                .btn-use {
+                    position: absolute;
+                    top: 0;
+                    right: 6px;
+                    height: 26px;
+                    line-height: 26x;
+                    padding: 0;
+                    padding: 0 8px;
+                    border: 1px solid color($colors, red-thunderbird, base);
+                    font-size: 12px;
+                    border-radius: 20px;
+                    .button-inner {
+                        color: color($colors, red-thunderbird, base);
+                    }
+                }
+            }
+        }
+    }
+}
