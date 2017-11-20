@@ -23,12 +23,17 @@ ionic serve
 npm run build //测试
 npm run ionic:build --prod//生产
 
-npm install -g cordova
 npm install -g cordova ionic
+cordova platform remove android
+cordova platform add android
 #Deploying to a Device
 ionic cordova run android --prod --release
 # or
 ionic cordova build android --prod --release
+#生成签名
+keytool -genkey -v -keystore demo.keystore -alias moon(应用名) -keyalg RSA -keysize 2048 -validity 10000
+#签名应用文件
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore demo.keystore test.apk moon
 
 # 文件结构
  
