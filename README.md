@@ -31,9 +31,10 @@ ionic cordova run android --prod --release
 # or
 ionic cordova build android --prod --release
 #生成签名
-keytool -genkey -v -keystore demo.keystore -alias moon(应用名) -keyalg RSA -keysize 2048 -validity 10000
+keytool -genkey -v -keystore my-release-key.keystore -alias moon(应用名) -keyalg RSA -keysize 2048 -validity 10000
+建议使用 "keytool -importkeystore -srckeystore my-release-key.keystore -destkeystore my-release-key.keystore -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。
 #签名应用文件
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore demo.keystore test.apk moon
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore demo.keystore test.apk moon(应用名)
 
 # 文件结构
  

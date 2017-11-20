@@ -58,9 +58,9 @@ export class HttpInterceptHandle {
           if (isUnLogin) {
             sessionStorage.setItem("isBack", "true");
             //如果不是登录页就跳转
-            if (window.location.hash != URL.stateProvider.login.url) {
-              window.location.href = window.location.origin + URL.stateProvider.login.url;
-            }
+            // if (window.location.hash != URL.stateProvider.login.url) {
+            //   window.location.href = window.location.origin + URL.stateProvider.login.url;
+            // }
             // this.events.publish(GLOBAL.events.push, URL.stateProvider.login.url,LoginPage, {});
             return;
           }
