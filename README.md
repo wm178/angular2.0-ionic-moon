@@ -23,7 +23,8 @@ ionic serve
 npm run build //测试
 npm run ionic:build --prod//生产
 
-
+npm install -g cordova
+npm install -g cordova ionic
 #Deploying to a Device
 ionic cordova run android --prod --release
 # or
